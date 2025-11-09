@@ -1,0 +1,15 @@
+
+Cosas que me hubieran gustado añadir y no he podido por las limitaciones de las etiquetas vistas (UDs 2.1 y 2.2):
+
+Elementos que mejorarían el currículum:
+
+	1. Añadir una imagen de perfil con la etiqueta <img> para hacer el currículum más visual.
+	2. Utilizar listas para organizar competencias y experiencia de manera más ordenada.
+	3. Incorporar tablas para mostrar la formación y experiencia profesional de forma estructurada.
+	4. Incluir un formulario para permitir el contacto directo desde la página.
+	5. Añadir enlaces a redes sociales con iconos o imágenes.
+	6. Implementar un botón para descargar el currículum en formato PDF.
+
+Motivo:
+
+En esta práctica solo se podían usar las etiquetas y atributos explicados en las Unidades 2.1 y 2.2 del temario, por lo que he utilizado únicamente la estructura HTML básica y estilos en línea sencillos desde Visual Studio Code.

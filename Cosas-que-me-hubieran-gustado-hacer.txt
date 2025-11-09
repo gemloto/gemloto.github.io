@@ -1,0 +1,20 @@
+
+
+Cosas que me hubieran gustado añadir y no he podido por las limitaciones de las etiquetas vistas UD 2.1
+
+Elementos que mejorarían el currículum:
+
+    1. Diseño visual con CSS (colores, tipografías, márgenes, columnas, diseño responsivo).
+    2. Foto de perfil para identificar visualmente.
+    3. Listas para ordenar competencias y experiencia de forma más clara.
+    4. Tablas para mostrar formación y experiencia de manera compacta.
+    5. Enlaces a redes sociales con iconos
+    6. Un formulario de contacto para recibir mensajes directos.
+    7. Botón de descarga del currículum en PDF.
+    8. Scripts (JavaScript) para validaciones e interacción.
+    9. Microdatos (JSON-LD) para mejorar visibilidad en buscadores.
+	
+Motivo: 
+
+En la primera parte del temario solo hemos visto etiquetas básicas: html, head,title,body, h1, h2, p, br, center, hr, a, em. Por eso el currículum es sencillo y sin estilos avanzados, dede Notepad++.
+ 
