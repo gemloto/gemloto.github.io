@@ -1,0 +1,38 @@
+body {
+background-image: url('../img/fondo.jpg');
+background-attachment: fixed;
+/* background-repeat: no-repeat; */
+background-position: top center;
+test-align: center;
+}
+ 
+
+h1 {
+    background-color: #1565c0;
+    color: #bbdefb;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #032c5c;
+}
+
+img {
+    border: 10px red solid;
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px black;
+    height: 500px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display inline;
+    border: 2px red solid;
+}
+
+a {
+    color: #1565c0;
+    font-weight: bold;
+    text-decoration: none;
+}
