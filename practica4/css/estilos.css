@@ -8,7 +8,7 @@
 }
 
 body {
-    /* Fondo más suave/bonito */
+    /* Fondo más suave/bonito (Añadido) */
     background-color: #FDF5E6; 
     text-align: center;
 }
@@ -19,29 +19,15 @@ h1 {
     font-size: 1.8em;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block; 
-}
-
-ul {
-    list-style: none;
-    display: inline-block; 
-}
-
-li {
-    display: inline;
-    margin: 0 10px;
-}
-
-p {
-    /* Dejar p global sin estilos para evitar conflictos */
-}
+/* Estilos de elementos básicos */
+img { max-width: 100%; height: auto; display: block; }
+ul { list-style: none; display: inline-block; }
+li { display: inline; margin: 0 10px; }
+p { /* Dejar p global sin estilos */ }
 
 #header {
     /* 1. Línea de 5px negra */
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid black; /* <-- 1. LÍNEA NEGRA */
     background-color: #B2DAF3;
     width: 100%;
 }
@@ -61,40 +47,40 @@ p {
 
 #text p {
     /* 10. Rellenan el 90% del espacio disponible */
-    width: 90%; 
+    width: 90%; /* <-- 10. 90% DE ANCHO */
     
     /* Alineación de los párrafos a la izquierda de la caja de texto */
     margin-left: 0; 
     margin-right: auto;
     
     /* 11. Separación de 10px entre párrafos (tres cajas separadas) */
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* <-- 11. SEPARACIÓN DE 10PX */
     margin-top: 0;
     
     /* 5. Los tres párrafos arrojan sombras. */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* <-- 5. SOMBRAS */
     /* 9. Sangría de 40 px en la primera línea. */
-    text-indent: 40px;
+    text-indent: 40px; /* <-- 9. SANGRÍA DE 40PX */
     
     text-align: justify;
     background-color: white;
     line-height: 1.5;
     padding: 15px; 
-    border: 2px dashed #D0D0D0; /* Borde punteado para cada párrafo */
+    border: 2px dashed #D0D0D0;
 }
 
 #text p:first-child {
     /* 4. Esquinas redondeadas solo en la parte superior 30px. */
-    border-radius: 30px 30px 0 0;
+    border-radius: 30px 30px 0 0; /* <-- 4. ESQUINAS SUPERIORES REDONDEADAS */
     /* 12. Fondo que se repite. */
-    background-image: url('../images/fondoParrafo.png');
+    background-image: url('../images/fondoParrafo.png'); /* <-- 12. FONDO QUE SE REPITE */
     background-repeat: repeat;
     background-color: #E0FFFF;
 }
 
 #text p:last-child {
     /* 8. Esquinas redondeadas solo en la parte inferior 30px. */
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 30px 30px; /* <-- 8. ESQUINAS INFERIORES REDONDEADAS */
     
     margin-bottom: 0; 
 }
@@ -114,7 +100,7 @@ p {
     font-weight: bold;
     padding: 5px 10px;
     /* 7. Línea roja de 5px a la izquierda. */
-    border-left: 5px solid red;
+    border-left: 5px solid red; /* <-- 7. LÍNEA ROJA EN EL MENÚ */
 }
 
 
@@ -125,13 +111,13 @@ p {
 
 #menu li a:hover{
     /* 14. Subrayado en rojo al pasar el ratón. */
-    text-decoration: underline;
+    text-decoration: underline; /* <-- 14. SUBRAYADO AL HOVER */
     color: red;
 }
 
 #footer{
     /* 6. Línea superior de 5px negra. */
-    border-top: 5px solid black;
+    border-top: 5px solid black; /* <-- 6. LÍNEA NEGRA SUPERIOR */
     background-color: #58167A;
     padding: 10px 0;
     width: 100%;
@@ -147,14 +133,15 @@ p {
 }
 
 #image {
-    /* Vista por defecto: Alineada a la derecha */
-    float: right;
-    margin-right: 60px;
+    /* 2. Vista por defecto: Alineada a la derecha */
+    float: right; /* <-- 2. ALINEADA A LA DERECHA */
+    /* 3. Separación a la derecha de 60 pixels. */
+    margin-right: 60px; /* <-- 3. SEPARACIÓN DE 60PX */
     margin-top: 10px;
     margin-left: 20px; 
     border: 1px solid black; 
     padding: 5px;
-    background-color: white; /* Color de fondo de la imagen (blanco) */
+    background-color: white; /* <-- FONDO BLANCO DE LA CAJA DE IMAGEN */
     width: 260px; 
     text-align: center; 
 }
@@ -164,7 +151,7 @@ p {
     max-width: 100%;
     height: auto;
     display: block; 
-    margin: 0 auto; 
+    margin: 0 auto; /* <-- CENTRADO DE LA IMAGEN DENTRO DE LA CAJA */
 }
 
 /* Solución para centrar el texto DESCRIPTIVO BAJO la foto */
@@ -173,7 +160,7 @@ p {
     padding: 5px 0 0 0;
     text-align: center; 
     width: 250px; 
-    margin: 0 auto; 
+    margin: 0 auto; /* <-- CENTRADO DEL TEXTO DESCRIPTIVO */
 }
 
 /* ========================================================= */
@@ -185,10 +172,11 @@ p {
     margin-right: auto;
     
     /* Centra la caja #image en el centro de la pantalla */
-    margin-left: auto;
+    margin-left: auto; /* <-- CENTRADO HORIZONTAL */
 }
 
 
+/* 13. Usando @media tienes que hacer que si el tamaño del navegador es menor de 500 px */
 @media all and (max-width: 500px) {
     /* 13. Media Query */
     
@@ -198,10 +186,15 @@ p {
     }
     
     #image {
-        float: none;
-        margin: 10px auto; 
-        width: 90%;
-        border: 5px solid red;
+        /* 13.4 La imagen debe aparecer en el centro de la ventana. (Desactivar float y centrar) */
+        float: none; /* <-- 13.4 CENTRAR */
+        margin: 10px auto; /* <-- 13.4 CENTRAR */
+        
+        /* 13.3 El tamaño que ocupa la imagen debe ser el 90% del total. */
+        width: 90%; /* <-- 13.3 ANCHO AL 90% */
+        
+        /* 13.2 El borde de la imagen cambia a rojo. */
+        border: 5px solid red; /* <-- 13.2 BORDE ROJO */
     }
     
     #text p {
