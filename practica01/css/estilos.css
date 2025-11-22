@@ -1,0 +1,49 @@
+body {
+background-image: url("../images/fondo.jpg");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: top center;
+text-align: center;
+}
+ 
+h1 {
+    background-color: #0a61c5;
+    color: #97c9f3;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #d6e1ee;
+}
+
+h2 {
+      color: black;
+      border-bottom: 2px solid #d6e1ee;
+      padding-bottom: 5px;
+     
+    }
+
+ p h2 {color: #042d5c;}
+
+h3 {
+      color: white;
+      font-weight: normal;
+    }
+
+img {
+     border: 10px #0a61c5 solid;
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px #97c9f3;
+    height: 500px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    border: 2px  #757592 solid;
+}
+
+a {
+    color: yellow;
+}
