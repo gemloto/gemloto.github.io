@@ -1,211 +1,120 @@
-/* Colores: #B2DAF3 (Header), #F6B806 (Menú/Enlaces), #58167A (Footer) */
+*{
 
-* {
-    /* Reinicia los márgenes y rellenos por defecto */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+
 }
 
 body {
-    /* Fondo más suave/bonito (Añadido) */
-    background-color: #FDF5E6; 
-    text-align: center;
+    background-color:rgb(243, 240, 250);
 }
 
 h1 {
+    border-bottom: 5px solid black;
     text-align: center;
-    padding: 20px 0;
-    font-size: 1.8em;
+
 }
 
-/* Estilos de elementos básicos */
-img { max-width: 100%; height: auto; display: block; }
-ul { list-style: none; display: inline-block; }
-li { display: inline; margin: 0 10px; }
-p { /* Dejar p global sin estilos */ }
+img {
+    border: black 5px solid;
+    margin-right: 60px;
+}
+
+
+ul {
+
+}
+
+li {
+
+}
+
+p {
+    border: black 5px dashed;
+}
 
 #header {
-    /* 1. Línea de 5px negra */
-    border-bottom: 5px solid black; /* <-- 1. LÍNEA NEGRA */
-    background-color: #B2DAF3;
-    width: 100%;
+  background-color: rgb(181, 172, 212);
 }
 
 #content{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 5%; 
-    overflow: hidden; 
+  
 }
 
 #text {
-    margin-bottom: 10px; 
-    overflow: hidden;
-    padding-top: 10px;
+    width: 90%;
+    margin left: auto;
+    margin right: auto;
+
 }
 
 #text p {
-    /* 10. Rellenan el 90% del espacio disponible */
-    width: 90%; /* <-- 10. 90% DE ANCHO */
-    
-    /* Alineación de los párrafos a la izquierda de la caja de texto */
-    margin-left: 0; 
-    margin-right: auto;
-    
-    /* 11. Separación de 10px entre párrafos (tres cajas separadas) */
-    margin-bottom: 10px; /* <-- 11. SEPARACIÓN DE 10PX */
-    margin-top: 0;
-    
-    /* 5. Los tres párrafos arrojan sombras. */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* <-- 5. SOMBRAS */
-    /* 9. Sangría de 40 px en la primera línea. */
-    text-indent: 40px; /* <-- 9. SANGRÍA DE 40PX */
-    
-    text-align: justify;
-    background-color: white;
-    line-height: 1.5;
-    padding: 15px; 
-    border: 2px dashed #D0D0D0;
+    border: black 5px dashed;
+    box-shadow: 10px 5px 5px black;
+    text-indent: 40px;
+    padding: 10px;
+    background-color:rgb(181, 172, 212);
 }
 
 #text p:first-child {
-    /* 4. Esquinas redondeadas solo en la parte superior 30px. */
-    border-radius: 30px 30px 0 0; /* <-- 4. ESQUINAS SUPERIORES REDONDEADAS */
-    /* 12. Fondo que se repite. */
-    background-image: url('../images/fondoParrafo.png'); /* <-- 12. FONDO QUE SE REPITE */
-    background-repeat: repeat;
-    background-color: #E0FFFF;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-image: url(../images/fondoParrafo.png);
 }
 
 #text p:last-child {
-    /* 8. Esquinas redondeadas solo en la parte inferior 30px. */
-    border-radius: 0 0 30px 30px; /* <-- 8. ESQUINAS INFERIORES REDONDEADAS */
-    
-    margin-bottom: 0; 
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 
 #menu {
-    margin-top: 10px;
-    background-color: #F6B806;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
+text-align: center;
 }
 
 #menu a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 5px 10px;
-    /* 7. Línea roja de 5px a la izquierda. */
-    border-left: 5px solid red; /* <-- 7. LÍNEA ROJA EN EL MENÚ */
+text-decoration: none;
 }
 
 
 #menu li{
     display: inline;
-    margin: 0 10px;
+    border-left: 5px solid red;
+    padding-left: 5px;
 }
 
 #menu li a:hover{
-    /* 14. Subrayado en rojo al pasar el ratón. */
-    text-decoration: underline; /* <-- 14. SUBRAYADO AL HOVER */
-    color: red;
+    border-bottom: 2px red solid;
 }
 
 #footer{
-    /* 6. Línea superior de 5px negra. */
-    border-top: 5px solid black; /* <-- 6. LÍNEA NEGRA SUPERIOR */
-    background-color: #58167A;
-    padding: 10px 0;
-    width: 100%;
+    border-top: 5px solid rgb(26, 85, 153);
+    background-color : rgb(46, 32, 97);
+    text-align: center;
+    color: white
 }
 
 #footer a{
-    color: #F6B806; 
-    text-decoration: none;
+    text-align: center;
+    color: white;
 }
 
 #footer a:hover{
-    text-decoration: underline;
+
 }
 
 #image {
-    /* 2. Vista por defecto: Alineada a la derecha */
-    float: right; /* <-- 2. ALINEADA A LA DERECHA */
-    /* 3. Separación a la derecha de 60 pixels. */
-    margin-right: 60px; /* <-- 3. SEPARACIÓN DE 60PX */
-    margin-top: 10px;
-    margin-left: 20px; 
-    border: 1px solid black; 
-    padding: 5px;
-    background-color: white; /* <-- FONDO BLANCO DE LA CAJA DE IMAGEN */
-    width: 260px; 
-    text-align: center; 
+    text-align: right;
 }
 
-/* Solución para centrar la imagen DENTRO del div #image */
-#image img {
-    max-width: 100%;
-    height: auto;
-    display: block; 
-    margin: 0 auto; /* <-- CENTRADO DE LA IMAGEN DENTRO DE LA CAJA */
-}
-
-/* Solución para centrar el texto DESCRIPTIVO BAJO la foto */
-#image p {
-    font-size: 0.8em;
-    padding: 5px 0 0 0;
-    text-align: center; 
-    width: 250px; 
-    margin: 0 auto; /* <-- CENTRADO DEL TEXTO DESCRIPTIVO */
-}
-
-/* ========================================================= */
-/* 🚀 REGLA PARA CENTRAR IMAGEN EN LA PÁGINA "MARCIANOS" */
-/* ========================================================= */
-.marciano-view #image {
-    /* Desactiva la flotación y el margen derecho */
-    float: none;
-    margin-right: auto;
-    
-    /* Centra la caja #image en el centro de la pantalla */
-    margin-left: auto; /* <-- CENTRADO HORIZONTAL */
-}
-
-
-/* 13. Usando @media tienes que hacer que si el tamaño del navegador es menor de 500 px */
 @media all and (max-width: 500px) {
-    /* 13. Media Query */
-    
-    #content {
-        padding-right: 20px;
-        padding-left: 20px;
+    img {
+    border: red 5px solid;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 90;%;
     }
-    
     #image {
-        /* 13.4 La imagen debe aparecer en el centro de la ventana. (Desactivar float y centrar) */
-        float: none; /* <-- 13.4 CENTRAR */
-        margin: 10px auto; /* <-- 13.4 CENTRAR */
-        
-        /* 13.3 El tamaño que ocupa la imagen debe ser el 90% del total. */
-        width: 90%; /* <-- 13.3 ANCHO AL 90% */
-        
-        /* 13.2 El borde de la imagen cambia a rojo. */
-        border: 5px solid red; /* <-- 13.2 BORDE ROJO */
+    text-align: center;
     }
-    
-    #text p {
-        width: 95%; 
-        margin-left: auto; 
-        margin-right: auto;
-    }
-    
-    #menu li {
-        display: block; 
-        margin: 5px auto;
-        width: fit-content;
-    }
-}
+
