@@ -28,7 +28,7 @@ body {
 .youtuber, .footer, .header {
     /* 4- color de fondo */
     background-color: #424242; /* cajas gris más claro */
-    border: 1px solid lightgray; /* líneas claras */
+    border: 1px solid white; /* líneas claras */
     /* 5- redondear el borde */
     border-radius: 5px;
     /* 6- sombra */
@@ -41,7 +41,7 @@ body {
 .footer {
     padding: 0px;
     color: white;
-    font-size: 0.7em; /* tamaño youtubers españoles famosos*/
+
 }
 
 /* imagen grande de portada */
@@ -49,15 +49,8 @@ body {
     border:black 4px solid; /* Dibuja un borde alrededor de la imagen */
     border-radius: 3%;   /* Redondea las esquinas del borde */
     /* 7- tamanyo */  
-    width: 90vw; /* 90% del ancho de la ventana (viewport) */
-    max-width: 400px;  /* ← máximo 400px en pantallas grandes */
-    height: auto; /* Alto automático para mantener proporción */
-    object-fit: cover;
-    margin: 15px auto; /* Centra la imagen horizontalmente */
-    display:block;  /* Hace que la imagen se comporte como bloque (necesario para centrarla) */
-
-    /* si quiesieramos personalizar el margen de la imagen; margin: 10px 15px;   10px arriba/abajo, 15px izquierda/derecha */
-      
+    width: 100%; /* 90% del ancho de la ventana (viewport) */
+    height: 280px; /* Alto automático para mantener proporción */      
     /* podriamos modificarlo por margen de izquierda: margin-left: auto; o margen por la derecha:
        margin-right: auto;*/ 
    
@@ -66,12 +59,13 @@ body {
     completamente el contenedor, manteniendo
     su relación de aspecto*/
     object-fit: cover; 
-    
+    display: block;
+    margin: 0 auto;        /* centra dentro de la caja */
 }
 
 .youtuber .images {
     /* 8- redondear la imagen*/
-    border-radius: 50%;
+    border-radius: 50%; /* Hace la imagen circular */
     width: 150px;
     height: 150px;    
     /* Se utiliza en imágenes y videos 
@@ -79,7 +73,6 @@ body {
     completamente el contenedor, manteniendo 
     su relación de aspecto*/
     object-fit: cover; 
-    margin: 10px auto; /* Centra la imagen horizontalmente */
 }
 
 .youtuber h2 {    
@@ -93,18 +86,10 @@ body {
     font-size: 1em;
 }
 
-.header h1 {
-    color: white;
-    font-size: 2em;
-}
-
 #menu {
     /* 9- quita los puntos */
     list-style-type: none; /* ← Quita los puntos de la lista */
     padding-left: 0; 
-    font-family: 'Times New Roman', Times, serif; 
-    margin: 0;
-
 }
 
 
@@ -112,10 +97,10 @@ li {
     /* 10- haz que los li no sean de tipo bloque */
     display: inline-block; /* ← Esto hace que estén en línea horizontal */
     /* 11- borde izquierdo rojo */
-    border-left: 4px solid red; /* ← Borde rojo 4px lado izquierdo */
+    border-left: 4px red solid; /* ← Borde rojo 4px lado izquierdo */
     /* 12- separa el borde de la izquierda */
     padding-left: 5px; /* ← Espacio DESPUÉS del borde rojo */
-    margin: 0 2px;   /* Espacio mínimo entre elementos */
+    margin: 10px;   /* Espacio mínimo entre elementos */
     white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
 }   
 
@@ -161,6 +146,6 @@ li {
     }
     .button:hover {
         /* 19- cambia el color al boton*/
-        background-color: #0056b3;
+        background-color: #aa0000; /* rojo más oscuro al pasar el ratón */
     }    
 }
