@@ -111,12 +111,13 @@ body {
 
 li {
     /* 10- haz que los li no sean de tipo bloque */
-    display: inline-block;
+    display: inline-block; /* ← Esto hace que estén en línea horizontal */
     /* 11- borde izquierdo rojo */
-    border-left: 4px solid red;
+    border-left: 4px solid red; /* ← Borde rojo 4px lado izquierdo */
     /* 12- separa el borde de la izquierda */
-    padding-left: 0px;
-    margin: 0 0px;
+    padding-left: 5px; /* ← Espacio DESPUÉS del borde rojo */
+    margin: 0 2px;   /* Espacio mínimo entre elementos */
+    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
 }   
 
 #menu a {
