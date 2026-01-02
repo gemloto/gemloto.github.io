@@ -1,0 +1,184 @@
+/*
+    CSS para el examen
+
+    colores:
+
+    fondo: #333333;
+    fondo: cajas: #424242;
+    linea: lightgray;
+    boton: #007BFF;
+    boton seleccionado: #0056b3;
+*/
+
+body {
+    /* 1- color de fondo */
+    background-color: #333333; /* fondo gris oscuro */
+    /* 2- ancho 90% */
+    width: 90%;
+    /* 3- centrar */
+    margin: 0 auto;  /* centra horizontalmente */
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.container {
+    text-align: center;
+}
+
+/* cabecera, cajas y pie */
+.youtuber, .footer, .header {
+    /* 4- color de fondo */
+    background-color: #424242; /* cajas gris más claro */
+    border: 2px solid #868686; /* líneas claras */
+    /* 5- redondear el borde */
+    border-radius: 5px;
+    /* 6- sombra */
+    box-shadow: 0 0 10px black;
+    margin: 5px auto;
+    padding: 20px;
+    text-align: center;    
+}
+
+.footer {
+    padding: 0%;
+    color: white;
+    font-size: 0.7em; /* tamaño youtubers españoles famosos*/
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+}
+
+/* imagen grande de portada */
+.imageHome{
+    border:black 4px solid; /* Dibuja un borde alrededor de la imagen */
+    border-radius: 3%;   /* Redondea las esquinas del borde */
+    /* 7- tamanyo */ 
+    width: 600px; /* Ancho imagen*/
+    max-width: 500px;  
+    height: 500px;  /* Alto de la imagen */
+    object-fit: cover;
+    display:block;  /* Hace que la imagen se comporte como bloque (necesario para centrarla) */
+
+    /* si quiesieramos personalizar el margen de la imagen; margin: 10px 15px;   10px arriba/abajo, 15px izquierda/derecha */
+
+    margin: auto;   /* Centra la imagen horizontalmente: auto distribuye el espacio sobrante 
+       por igual a izquierda y derecha */  
+      
+    /* podriamos modificarlo por margen de izquierda: margin-left: auto; o margen por la derecha:
+       margin-right: auto;*/ 
+   
+    /* Se utiliza en imágenes y videos 
+    para asegurarse de que siempre llenen 
+    completamente el contenedor, manteniendo
+    su relación de aspecto*/
+    object-fit: cover; 
+    
+}
+
+.youtuber .images {
+    /* 8- redondear la imagen*/
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;    
+    /* Se utiliza en imágenes y videos 
+    para asegurarse de que siempre llenen 
+    completamente el contenedor, manteniendo 
+    su relación de aspecto*/
+    object-fit: cover; 
+}
+
+.youtuber h2 {    
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.youtuber p {
+    color: white;
+    font-size: 1em;
+}
+
+#menu {
+    /* 9- quita los puntos */
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-family: 'Times New Roman', Times, serif; 
+     font-size: 1em;  /* ajustar tamaño de letra menú */
+}
+
+
+li {
+    /* 10- haz que los li no sean de tipo bloque */
+    display: inline-block;
+    /* 11- borde izquierdo rojo */
+    border-left: 4px solid red;
+    /* 12- separa el borde de la izquierda */
+    padding-left: 0px;
+    margin: 0 0px;
+}   
+
+#menu a {
+    /* 13- enlaces blancos */
+    color: white;
+    /* 14- sin subrayado */
+    text-decoration: none;
+    /* algo de espacio para que parezcan botones de menú */
+    padding: 1px 1px;
+}
+
+#menu a:hover {
+    /* 15- cambia el color al subrayado (cambia color de texto al pasar con el ratón)*/
+    color: red;
+}
+
+
+.button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF; /* botón azul */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    /* animacion en css, para cambiar el color del boton, no visto en clase 
+    pero yo te lo regalo ;) */
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    /* 16- cambia el color al boton*/
+    background-color: red; /* enlaces del menú se ponen rojos al pasar por él*/
+}
+
+@media all and (max-width: 700px) {
+    /* menú en vertical en móvil (opcional pero ayuda a que se parezca más) */
+   .imageHome {
+    /* se hace más pequeña en móvil */
+        width: 80%;
+        max-width: 300px;
+        height: 150px;  /* altura más baja para pantallas pequeñas */
+    }
+    
+    li {
+        display: block;
+        border-left: none;
+        border-top: 4px solid red;
+        padding: 5px 0;
+        margin: 0;
+    }
+    .youtuber, .footer {
+        /* 17- cambia el color al BORDE*/
+        border-color: red;
+    }
+    .button {
+        /* 18- cambia el color al boton*/  
+        background-color: red;      
+    }
+    .button:hover {
+        /* 19- cambia el color al boton*/
+        background-color: #aa0000;
+    }    
+}
