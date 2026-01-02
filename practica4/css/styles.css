@@ -49,11 +49,9 @@ body {
     border:black 4px solid; /* Dibuja un borde alrededor de la imagen */
     border-radius: 3%;   /* Redondea las esquinas del borde */
     /* 7- tamanyo */  
-    width: 60%;    /* se adapta al tamaño de la pantalla */
-    height: auto;    /* la altura se ajusta sola, no se deforma */
-    /* podriamos modificarlo por margen de izquierda: margin-left: auto; o margen por la derecha:
-       margin-right: auto;*/ 
-   
+    width: 60%;       /* cambia con la pantalla */
+    height: 60%;      /* mismo porcentaje ≈ cuadrado dentro del body */
+
     /* Se utiliza en imágenes y videos 
     para asegurarse de que siempre llenen 
     completamente el contenedor, manteniendo
