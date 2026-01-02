@@ -49,8 +49,8 @@ body {
     border:black 4px solid; /* Dibuja un borde alrededor de la imagen */
     border-radius: 3%;   /* Redondea las esquinas del borde */
     /* 7- tamanyo */  
-    width: 100%; /* 90% del ancho de la ventana (viewport) */
-    height: 280px; /* Alto automático para mantener proporción */      
+    width: 60%;            /* porción del ancho de la caja */
+    height: auto;          /* altura automática, mantiene proporción */
     /* podriamos modificarlo por margen de izquierda: margin-left: auto; o margen por la derecha:
        margin-right: auto;*/ 
    
@@ -60,7 +60,7 @@ body {
     su relación de aspecto*/
     object-fit: cover; 
     display: block;
-    margin: 0 auto;        /* centra dentro de la caja */
+    margin: 10px auto; /* pequeña separación hacia abajo y centrada */
 }
 
 .youtuber .images {
