@@ -28,7 +28,7 @@ body {
 .youtuber, .footer, .header {
     /* 4- color de fondo */
     background-color: #424242; /* cajas gris más claro */
-    border: 2px solid #868686; /* líneas claras */
+    border: 1px solid lightgray; /* líneas claras */
     /* 5- redondear el borde */
     border-radius: 5px;
     /* 6- sombra */
@@ -39,31 +39,24 @@ body {
 }
 
 .footer {
-    padding: 0%;
+    padding: 0px;
     color: white;
     font-size: 0.7em; /* tamaño youtubers españoles famosos*/
-}
-
-.header h1 {
-    color: white;
-    margin: 0;
 }
 
 /* imagen grande de portada */
 .imageHome{
     border:black 4px solid; /* Dibuja un borde alrededor de la imagen */
     border-radius: 3%;   /* Redondea las esquinas del borde */
-    /* 7- tamanyo */ 
-    width: 600px; /* Ancho imagen*/
-    max-width: 500px;  
-    height: 500px;  /* Alto de la imagen */
+    /* 7- tamanyo */  
+    width: 90vw; /* 90% del ancho de la ventana (viewport) */
+    max-width: 400px;  /* ← máximo 400px en pantallas grandes */
+    height: auto; /* Alto automático para mantener proporción */
     object-fit: cover;
+    margin: 15px auto; /* Centra la imagen horizontalmente */
     display:block;  /* Hace que la imagen se comporte como bloque (necesario para centrarla) */
 
     /* si quiesieramos personalizar el margen de la imagen; margin: 10px 15px;   10px arriba/abajo, 15px izquierda/derecha */
-
-    margin: auto;   /* Centra la imagen horizontalmente: auto distribuye el espacio sobrante 
-       por igual a izquierda y derecha */  
       
     /* podriamos modificarlo por margen de izquierda: margin-left: auto; o margen por la derecha:
        margin-right: auto;*/ 
@@ -86,6 +79,7 @@ body {
     completamente el contenedor, manteniendo 
     su relación de aspecto*/
     object-fit: cover; 
+    margin: 10px auto; /* Centra la imagen horizontalmente */
 }
 
 .youtuber h2 {    
@@ -99,13 +93,18 @@ body {
     font-size: 1em;
 }
 
+.header h1 {
+    color: white;
+    font-size: 2em;
+}
+
 #menu {
     /* 9- quita los puntos */
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
+    list-style-type: none; /* ← Quita los puntos de la lista */
+    padding-left: 0; 
     font-family: 'Times New Roman', Times, serif; 
-     font-size: 1em;  /* ajustar tamaño de letra menú */
+    margin: 0;
+
 }
 
 
@@ -125,8 +124,6 @@ li {
     color: white;
     /* 14- sin subrayado */
     text-decoration: none;
-    /* algo de espacio para que parezcan botones de menú */
-    padding: 1px 1px;
 }
 
 #menu a:hover {
@@ -144,32 +141,16 @@ li {
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    margin-top: 15px;
     /* animacion en css, para cambiar el color del boton, no visto en clase 
     pero yo te lo regalo ;) */
     transition: background-color 0.3s ease;
 }
 .button:hover {
     /* 16- cambia el color al boton*/
-    background-color: red; /* enlaces del menú se ponen rojos al pasar por él*/
+    background-color: #0056b3; /* azul más oscuro al pasar el ratón */
 }
 
 @media all and (max-width: 700px) {
-    /* menú en vertical en móvil (opcional pero ayuda a que se parezca más) */
-   .imageHome {
-    /* se hace más pequeña en móvil */
-        width: 80%;
-        max-width: 300px;
-        height: 150px;  /* altura más baja para pantallas pequeñas */
-    }
-    
-    li {
-        display: block;
-        border-left: none;
-        border-top: 4px solid red;
-        padding: 5px 0;
-        margin: 0;
-    }
     .youtuber, .footer {
         /* 17- cambia el color al BORDE*/
         border-color: red;
@@ -180,6 +161,6 @@ li {
     }
     .button:hover {
         /* 19- cambia el color al boton*/
-        background-color: #aa0000;
+        background-color: #0056b3;
     }    
 }
