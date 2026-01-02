@@ -49,8 +49,8 @@ body {
     border:black 4px solid; /* Dibuja un borde alrededor de la imagen */
     border-radius: 3%;   /* Redondea las esquinas del borde */
     /* 7- tamanyo */  
-    width: 60%;            /* porción del ancho de la caja */
-    height: auto;     /* altura automática, mantiene proporción */
+    width: 60%;    /* se adapta al tamaño de la pantalla */
+    height: auto;    /* la altura se ajusta sola, no se deforma */
     /* podriamos modificarlo por margen de izquierda: margin-left: auto; o margen por la derecha:
        margin-right: auto;*/ 
    
