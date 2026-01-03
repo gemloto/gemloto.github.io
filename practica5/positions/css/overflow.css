@@ -1,0 +1,32 @@
+@import url('style.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor principal que encierra floats y muestra scroll si hace falta */
+.principal {
+    overflow: auto;             /* clave: genera un BFC y muestra scroll si hay exceso */
+    border: 5px solid black;
+    padding: 10px;
+}
+
+/* Columna izquierda */
+.izquierda {
+    float: left;
+    width: 45%;
+    background-color: lightgray;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Columna derecha */
+.derecha {
+    float: right;
+    width: 45%;
+    background-color: lightgray;
+    padding: 10px;
+    box-sizing: border-box;
+}

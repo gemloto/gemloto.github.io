@@ -1,0 +1,29 @@
+@import url('style.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Caja que flota a la izquierda */
+.flota {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+/* Párrafo “limpio” que no quiere rodear al float */
+.limpio {
+    clear: left;          /* o clear: both; según el ejemplo */
+}
+
+/* Si también usas especial/normal */
+.especial {
+    position: relative;
+    display: inline-block;
+}
+
+.normal {
+    display: inline-block;
+}

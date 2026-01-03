@@ -5,58 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POSITION</title>
-    <link rel="stylesheet" type="text/css" href="css/normal.css" />
+    <link rel="stylesheet" type="text/css" href="css/nInline.css">
 </head>
 
-    <!-- Cartas -->
-    <div>
-        <div class="carta">
-            <img src="images/1.jpg" alt="Carta 1">
-        </div>
-        <div class="carta">
-            <img src="images/2.jpg" alt="Carta 2">
-        </div>
-        <div class="carta">
-            <img src="images/3.jpg" alt="Carta 3">
-        </div>
-        <div class="carta">
-            <img src="images/4.jpg" alt="Carta 4">
-        </div>
-        <div class="carta">
-            <img src="images/cuadro.jpg" alt="Carta X">
-        </div>
+<body>
+    <div>  
+        <p class="inlineBlock-especial">Texto del 1</p>
+        <p class="inlineBlock-normal">Texto del 2</p>
+        <p class="inlineBlock-normal">Texto del 3</p>
+        <p class="inlineBlock-normal">Texto del 4</p>
     </div>
 
-    <div class="estilosCss"> 
-    <pre>
-        .especial {
-                position: normal;  <-----------
+
+    <div class="estilosCss">
+        <pre>
+            .especial {
+                position: normal;
                 background-color: red;
                 border: 2px solid black;  
-                width: 200px; 
-                height: 200px;
+                width: 200px; <------
+                height: 200px; <------
                 text-align: center;
                 line-height: 200px;
                 font-size: 20px;
-        }
-        .normal {
-                position: normal; <-----------
+                display: inline-block;    <------
+            }
+            .normal {
                 border: 2px solid black;  
                 background-color: green;
-                width: 200px; 
-                height: 200px;
+                width: 200px; <------
+                height: 200px; <------
                 text-align: center;
                 line-height: 200px;
                 font-size: 20px;
-        }
-    </pre>
+                display: inline-block;    <------
+            }
+        </pre>
     </div>
 
 <ul class="menu">
     <li>
-        <a href="prac3.html" class="active">Normal - block</a>
+        <a href="prac3.html">Normal - block</a>
         <a href="NInline.html">Normal - inline</a>
-        <a href="NInlineBlock.html">Normal - inline-block</a>
+        <a href="NInlineBlock.html" class="active">Normal - inline-block</a>
         <a href="relativo.html">Relativo</a>
         <a href="absoluto.html">Absoluto</a>
         <a href="absolutoPadre.html">Absoluto Padre</a>
@@ -70,7 +61,7 @@
 
 <div class="footer">
     <p>
-        <b>POSITION NORMAL.</b> Es el posicionamiento por defecto.
+        <b>DISPLAY INLINE-BLOCK.</b> No hace salto de línea y respeta width y height.
     </p>
 </div>
 </body>
