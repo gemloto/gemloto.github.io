@@ -1,0 +1,65 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.estilosCss {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+/* EJEMPLO INLINE: usado por NInline.html */
+.especial {
+    background-color: red;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    display: inline;   /* clave del ejemplo */
+}
+
+.normal {
+   border: 2px solid black;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+
+    display: inline;   /* clave del ejemplo */
+}
+
+/* EJEMPLO INLINE‑BLOCK: lo usará NInlineBlock.html */
+.inlineBlock-especial {
+    background-color: red;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+
+    display: inline-block;
+}
+
+.inlineBlock-normal {
+    border: 2px solid black;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+
+    display: inline-block;
+}
