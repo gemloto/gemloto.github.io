@@ -1,7 +1,7 @@
 *{
   margin: 0px auto;
 }
-
+/* FONDO Y ESPACIO PARA MENÚ Y FOOTER */
 body {
   background: url('../images/fondo.jpg');
   background-repeat: no-repeat;
@@ -38,9 +38,12 @@ p {
 }
 
 #content{
-  
+/* contenedor general, no necesita nada especial para la práctica */ 
 }
 
+/* ===================================================== */
+/* PUNTO 1: BARRA DE MENÚ FIJA ARRIBA                    */
+/* ===================================================== */
 #menu {
   /*
   Punto 1: Barra de menu siempre estara 
@@ -49,6 +52,14 @@ p {
   /*1: */
   /*2: */
   /*3: */
+   /*1: Posicion fija */
+  position: fixed;
+  /*2: Pegada a la parte superior */
+  top: 0;
+  /*3: Ocupa todo el ancho y se alinea desde la izquierda */
+  left: 0;
+  width: 100%;
+
   text-align: center;  
   background-color: #097054;
   border: 1px solid #FF9900;
@@ -74,8 +85,16 @@ p {
   /* necesitas 2 instrucciones*/
   /*1: */
   /*2: */
+  /*1: Fondo naranja al pasar el ratón */
+  background-color: orange;
+  /*2: Subrayado azul */
+  text-decoration: underline;
+  text-decoration-color: blue;
 }
 
+/* ===================================================== */
+/* PUNTO 6: BARRA DE PIE DE PÁGINA FIJA ABAJO            */
+/* ===================================================== */
 #footer{
   /*
   Punto 6: Barra de pie de pagina siempre estara 
@@ -84,6 +103,13 @@ p {
   /*1: */
   /*2: */
   /*3: */
+  /*1: Posicion fija */
+  position: fixed;
+  /*2: Pegada a la parte inferior */
+  bottom: 0;
+  /*3: Ocupa todo el ancho */
+  left: 0;
+  width: 100%;
   
   background-color: #097054;
   text-align: center;
@@ -107,7 +133,9 @@ p {
   margin-right: 60px;
 }
 
-
+/* ===================================================== */
+/* PUNTO 2: CAPA DE IMÁGENES FLOTEANDO IZQ / DCHA        */
+/* ===================================================== */
 #imageLeft {
  /*
   Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
@@ -115,8 +143,12 @@ p {
 
   /* necesitas 1 instruccion*/
   /*1: */
+  /*1: Flotar a la izquierda */
+  float: left;
+
   text-align: center;
   padding-bottom: 5px;
+
 }
 
 #imageRight {
@@ -126,10 +158,17 @@ p {
 
   /* necesitas 1 instruccion*/
   /*1: */
+  /*1: Flotar a la derecha */
+  float: right;
+
   text-align: center;
   padding-bottom: 5px;
 }
 
+/* ===================================================== */
+/* PUNTO 3: ROMPER EL FLOAT DE CAPA 2 (ANTERIOR).                      */
+/* Y CAPA 3 IZQUIERDA CON DISPLAY                        */
+/* ===================================================== */
 #textMain {
 /*
   Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
@@ -137,6 +176,8 @@ p {
 
   /* necesitas 1 instruccion*/
   /*1: */
+  /*1: Romper los floats anteriores */
+  clear: both;
 }
 
 #imageToHide {
@@ -146,10 +187,24 @@ p {
 
   /* necesitas 1 instruccion*/
   /*1: */  
+  /*1: Flotar también a la izquierda (capa 3 izqda.) */
+  float: left;  
+
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Imagen izquierda de la capa 3 (cuarto dragón) */
+#imageToHideRight {
+  float: right;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/* ===================================================== */
+/* PUNTO 4: CAPA DE COOKIES POSICIONADA, NO FIJA         */
+/* ===================================================== */
 #textCookie {
   text-align: center;
 }
@@ -164,6 +219,15 @@ p {
   /*2: */    
   /*3: */    
   /*4: */    
+  /*1: Posicion relativa respecto a la página */
+  position: relative;
+  /*2: Distancia desde arriba */
+  top: 80px;
+  /*3: Margen lateral para centrar (izquierda) */
+  margin-left: 10%;
+  /*4: Margen lateral para centrar (derecha) */
+  margin-right: 10%;
+
   border:2px solid red;
   background-color: white;
   margin-bottom: 5px;
@@ -172,6 +236,9 @@ p {
 }
 
 #textOverflow {
+/* ===================================================== */
+/* PUNTO 5: OVERFLOW VERTICAL, SIN HORIZONTAL            */
+/* ===================================================== */
  /*
   Punto 5: La capa tiene una barra de scroll vertical para que podamos leer el texto que no cabe en el tamaño. Solo vertical, no horizontal
  */
@@ -179,15 +246,20 @@ p {
   /* necesitas 2 instruccion*/
   /*1: */  
   /*2: */  
-  
+  /*1: Scroll solo vertical */
+  overflow-y: scroll;  
+  /*2: Ocultar overflow horizontal */
+  overflow-x: hidden;  
+
+ 
   height: 250px;
   text-align: justify;
   border: 5px solid black;
   background-color: white;
   padding: 20px;
-  margin-right: 20px;
 }
 
+/* Texto central entre las capas 2 */
 #textCentral {
   margin-top: 10px;
   padding: 15px;
@@ -209,16 +281,24 @@ p {
 }
 
 .button:hover {
-    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
+               0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-@media all and (max-width: 500px) {
-  #imageLeft {
+
+/* ===================================================== */
+/* PUNTO 7: @MEDIA – AJUSTE EN PANTALLAS PEQUEÑAS        */
+/* ===================================================== */
+  @media all and (max-width: 500px) {
+    #imageLeft {
     /*
     Punto 7.1: Barra de menu siempre estara 
     */
     /* necesitas 1 instruccion*/
     /*1: */
+    /*1: Quitar el float */
+    float: none;
+
     text-align: center;
     padding-bottom: 5px;
   }
@@ -229,9 +309,12 @@ p {
     */
     /* necesitas 1 instruccion*/
     /*1: */
+     /*1: Quitar el float */
+    float: none;
+
     text-align: center;
     clear: both;
-  padding-bottom: 5px;
+    padding-bottom: 5px;
   }
   
   #textCentral {
@@ -240,10 +323,12 @@ p {
   
   #imageToHide {
     /*
-    Punto 7.2: Barra de menu siempre estara 
+    Punto 7.2: Barra de menu siempre estara. La capa 3 también se desplaza hacia arriba / se adapta.
     */
     /* necesitas 1 instruccion*/
     /*1: */
+    /*1: Quitar el float en pantallas estrechas */
+    float: none;
 
     text-align: center;
     margin-bottom: 40px;
@@ -252,12 +337,12 @@ p {
   #textOverflow {
     margin-right: 0px;
   }
-  
-  #header {
+    #header {
     margin-top: 50px;
   }
  
-}
+}   
+
 
 @media all and (max-width: 300px) {
   #header {
@@ -266,4 +351,5 @@ p {
     */
     margin-top: 100px;
   }
+
 }
