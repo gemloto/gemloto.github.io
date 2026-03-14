@@ -1,0 +1,270 @@
+        /* ESTILOS GLOBALES: Fondo blanco, texto negro */
+        body { 
+            margin: 0; padding: 30px; 
+            background-color: white; 
+            color: black;
+            font-family: Arial, sans-serif; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombreado suave global */
+        }
+
+        /* CONTENEDOR SUPERIOR: Izquierda (Añadir) y Derecha (Reparte) */
+        .top-section {
+            display: flex;
+            justify-content: space-between; /* Separa los bloques a los extremos */
+            align-items: flex-end;
+            max-width: 1000px;
+            margin: 0 auto 30px auto;
+        }
+
+        .left-controls h1 {
+            margin: 0 0 15px 0;
+            font-size: 32px;
+        }
+
+        .formulario {
+            display: flex;
+            gap: 10px;
+        }
+
+        #nombre {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0; /* Gris claro suave */
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        /* BOTONES */
+        #botonAnyadir {
+            background-color: #ffc107; /* Amarillo */
+            color: black;
+            font-weight: bold;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #botonResuelve {
+            background-color: #dc3545; /* Rojo */
+            color: white;
+            font-weight: bold;
+            border: 2px solid #e0e0e0;;
+            border-radius: 5px;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* CONTENEDOR DE COLUMNAS */
+        .main-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .col-left, .col-right { 
+            flex: 1; 
+        }
+
+        /* PANELES CON SCROLL */
+        #panel, #solucion {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            height: 400px; /* Altura fija */
+            overflow-y: auto; /* Scroll si hay mucho texto */
+            background-color: white;
+        }
+
+        h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        /* LISTA DE AMIGOS (Izquierda) */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between; /* Nombre a la izquierda, botón a la derecha */
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn-borrar {
+            background-color: #dc3545; /* Rojo */
+            color: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* TABLA (Derecha) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        th, td {
+             border: 2px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffc107; /* Encabezados amarillos */
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body { 
+    margin: 0; 
+    padding: 20px; 
+    background: white; font-family: Arial, sans-serif; }
+#nombre { 
+    flex: 1; 
+    max-width: 300px; 
+    padding: 12px; 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+}
+
+input[type="submit"] { 
+    background: #ffc107 !important; 
+    color: black !important; 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+input[type="button"]
+
+#botonResuelve { 
+    background: #dc3545 !important; 
+    color: white !important; 
+    width: 220px; 
+    display: block; 
+    margin: 0 auto 25px; 
+    padding: 12px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+
+}
+
+.main-container { 
+    display: flex; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.col-left, .col-right { 
+    flex: 1; 
+}
+
+#panel, #solucion { 
+    background: white !important; 
+    color: black !important; 
+    padding: 25px; 
+    border-radius: 12px; 
+    max-height: 400px; 
+    overflow: auto; 
+    border: 2px solid #ddd; 
+}
+
+#panel h3, 
+#solucion h3 { 
+    color: black !important; 
+    margin: 0 0 20px 0; 
+    text-align: center; 
+}
+
+#panel ul { 
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+#panel li { 
+    display: flex; 
+    align-items: center; 
+    background: #f8f9fa; 
+    padding: 16px; 
+    border-radius: 8px; 
+    margin-bottom: 12px; 
+}
+
+#panel input[type="button"] { 
+    background: #dc3545 !important; 
+    color: white !important; 
+    border: none; 
+    padding: 10px 16px; 
+    border-radius: 6px; 
+    margin-right: 15px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+#panel span { 
+    font-size: 18px; 
+    font-weight: 500; 
+    flex: 1; 
+    color: black !important; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px auto; 
+    font-size: 18px; 
+}
+
+th { 
+    background: #ffc107 !important; 
+    color: black !important; 
+    border: 2px solid #333; 
+    padding: 18px; 
+    font-weight: bold; 
+}
+td { 
+    background: white !important; 
+    color: black !important; 
+    border: 2px solid #333; 
+    padding: 18px;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo invisible</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SECCIÓN SUPERIOR -->
+    <div class="top-section">
+        <!-- Parte Izquierda -->
+        <div class="left-controls">
+            <h1>Amigo invisible</h1>
+            <div class="formulario">
+                <input type="text" id="nombre" placeholder="Nombre del amigo...">
+                <input type="button" value="Añadir" id="botonAnyadir">
+            </div>
+        </div>
+        
+        <!-- Parte Derecha -->
+        <div class="right-controls">
+            <input type="button" value="Reparte" id="botonResuelve">
+        </div>
+    </div>
+    
+    <!-- COLUMNAS -->
+    <div class="main-container">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="col-left">
+            <div id="panel">
+                <h3>Lista de amigos</h3>
+                <ul id="lista-amigos"></ul>
+            </div>
+        </div>
+        
+        <!-- COLUMNA DERECHA -->
+        <div class="col-right">
+            <div id="solucion">
+                <h3>Resultado del sorteo</h3>
+                <div class="tabla-container" id="tabla-container">
+                    <p style="color: gray; font-style: italic;">Añade al menos 3 amigos y pulsa "Reparte"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let amigos = [];
+        let solucionClientes = new Map();
+
+        const els = {
+            nombre: document.getElementById('nombre'),
+            botonAnyadir: document.getElementById('botonAnyadir'),
+            botonResuelve: document.getElementById('botonResuelve'),
+            listaAmigos: document.getElementById('lista-amigos'),
+            tablaContainer: document.getElementById('tabla-container')
+        };
+
+        function renderLista() {
+            els.listaAmigos.innerHTML = '';
+            amigos.forEach((amigo) => {
+                const li = document.createElement('li');
+                
+                // Texto del nombre
+                const span = document.createElement('span');
+                span.textContent = amigo;
+                
+                // Botón borrar
+                const btn = document.createElement('input');
+                btn.type = 'button';
+                btn.value = 'Borrar';
+                btn.className = 'btn-borrar'; // Aplica el estilo rojo
+                btn.dataset.id = amigo;
+                btn.dataset.action = 'borrar';
+                
+                // Añado primero el nombre y luego el botón (para que quede a la derecha)
+                li.appendChild(span);
+                li.appendChild(btn);
+                
+                els.listaAmigos.appendChild(li);
+            });
+        }
+
+        function renderTabla() {
+            if (solucionClientes.size === 0) return;
+            
+            let tablaHTML = '<table><tr><th>Regalador</th><th>Regala a</th></tr>';
+            solucionClientes.forEach((regalaA, regalador) => {
+                tablaHTML += `<tr><td>${regalador}</td><td>${regalaA}</td></tr>`;
+            });
+            tablaHTML += '</table>';
+            
+            els.tablaContainer.innerHTML = tablaHTML;
+        }
+
+        function borraAmigo(nombre) {
+            const idx = amigos.indexOf(nombre);
+            if (idx > -1) {
+                amigos.splice(idx, 1);
+                solucionClientes.clear();
+                els.tablaContainer.innerHTML = '<p style="color: gray; font-style: italic;">Sorteo reiniciado. Pulsa Reparte de nuevo.</p>';
+            }
+            renderLista();
+        }
+
+        function aleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function reparto() {
+            if (amigos.length < 3) return false;
+            solucionClientes.clear();
+            let disponibles = [...amigos];
+            
+            for (let i = disponibles.length - 1; i > 0; i--) {
+                const j = aleatorio(0, i);
+                [disponibles[i], disponibles[j]] = [disponibles[j], disponibles[i]];
+            }
+            
+            let valido = true;
+            for (let i = 0; i < amigos.length; i++) {
+                const regalador = amigos[i];
+                const regalaA = disponibles[i];
+                if (regalador === regalaA) { valido = false; break; }
+                solucionClientes.set(regalador, regalaA);
+            }
+            return valido;
+        }
+
+        // EVENTOS
+        els.botonAnyadir.addEventListener('click', (e) => {
+            e.preventDefault();
+            const nuevo = els.nombre.value.trim();
+            if (!nuevo) return;
+            
+            if (new Set(amigos).has(nuevo)) {
+                alert('Ese amigo ya está en la lista.');
+                return;
+            }
+            
+            amigos.push(nuevo);
+            els.nombre.value = ''; // Limpia el campo
+            renderLista();
+        });
+
+        // Evento para poder añadir pulsando la tecla "Enter"
+        els.nombre.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                els.botonAnyadir.click();
+            }
+        });
+
+        document.getElementById('lista-amigos').addEventListener('click', (e) => {
+            if (e.target.dataset.action === 'borrar') {
+                borraAmigo(e.target.dataset.id);
+            }
+        });
+
+        els.botonResuelve.addEventListener('click', () => {
+            if (amigos.length < 3) {
+                alert('Necesitas al menos 3 amigos para repartir.');
+                return;
+            }
+            
+            let intentos = 0;
+            let valido = false;
+            while (intentos++ < 100 && !valido) {
+                valido = reparto();
+            }
+            
+            if (valido) {
+                renderTabla();
+            } else {
+                alert('Hubo un error calculando, vuelve a probar.');
+            }
+        });
+    </script>
+</body>
+</html>
