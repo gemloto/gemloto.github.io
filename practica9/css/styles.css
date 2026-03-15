@@ -78,7 +78,7 @@ hr {
 }
 
 .resultado.cifrado {
-    background: #d1ecf1;
-    border-color: #17a2b8;
+    background: #d4edda; 
+    border: 2px solid #28a745; 
     font-weight: bold;
 }
