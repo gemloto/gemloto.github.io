@@ -1,0 +1,14 @@
+# Práctica 10 - JavaScript 3
+
+Este repositorio contiene las prácticas de la unidad JavaScript 3:
+
+- temperatura: práctica con Fetch API y OpenWeather
+- spock: práctica con promesas y setTimeout
+- monedas: práctica con Frankfurter API
+- criptomonedas: práctica opcional con Coinbase API
+
+## Estructura
+- /temperatura
+- /spock
+- /monedas
+- /criptomonedas

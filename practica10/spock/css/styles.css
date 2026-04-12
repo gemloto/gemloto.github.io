@@ -1,0 +1,84 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background: #f8f9fa; 
+    padding: 40px 20px; 
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 { 
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 30px; 
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label { 
+    margin-bottom: 8px; 
+    font-weight: bold; 
+    color: #555; 
+}
+
+input { 
+    padding: 12px; 
+    border: 2px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 16px;
+}
+
+input:focus { 
+    border-color: #007bff; 
+    outline: none; 
+}
+
+#btn-cifrar {
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-cifrar:hover { background: #0056b3; }
+
+hr { 
+    border: none; 
+    height: 2px; 
+    background: #eee; 
+    margin: 25px 0; 
+}
+
+.resultado {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 18px;
+    min-height: 60px;
+    text-align: center;
+    border: 2px solid #ddd;
+    margin: 0;
+}
+
+.resultado.cifrado {
+    background: #d4edda; 
+    border: 2px solid #28a745; 
+    font-weight: bold;
+}
