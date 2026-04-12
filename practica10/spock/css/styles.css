@@ -1,84 +1,129 @@
-body { 
-    font-family: Arial, sans-serif; 
-    background: #f8f9fa; 
-    padding: 40px 20px; 
+
+    /* Estilos generales */
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: #fff;
     margin: 0;
-}
+    padding: 0;
+    min-height: 100vh;
+    }
 
-.container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 20px;
+        color: #ffcc00;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 
-h1 { 
-    text-align: center; 
-    color: #333; 
-    margin-bottom: 30px; 
-}
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-.form-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
+    p, label {
+        font-size: 1.2rem;
+    }
 
-label { 
-    margin-bottom: 8px; 
-    font-weight: bold; 
-    color: #555; 
-}
+    ul {
+        margin-left: 20px;
+        list-style-type: square;
+    }
 
-input { 
-    padding: 12px; 
-    border: 2px solid #ddd; 
-    border-radius: 5px; 
-    font-size: 16px;
-}
+    ul li {
+        margin-bottom: 5px;
+    }
 
-input:focus { 
-    border-color: #007bff; 
-    outline: none; 
-}
-
-#btn-cifrar {
-    width: 100%;
-    padding: 15px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#btn-cifrar:hover { background: #0056b3; }
-
-hr { 
-    border: none; 
-    height: 2px; 
-    background: #eee; 
-    margin: 25px 0; 
-}
-
-.resultado {
-    background: #e9ecef;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: monospace;
-    font-size: 18px;
-    min-height: 60px;
+    .opciones {
     text-align: center;
-    border: 2px solid #ddd;
-    margin: 0;
-}
+    margin: 20px 0;
+    }
 
-.resultado.cifrado {
-    background: #d4edda; 
-    border: 2px solid #28a745; 
-    font-weight: bold;
-}
+
+    select {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+         margin-left: 10px;
+    }
+
+    .resultados {
+        margin-top: 20px;
+    }
+
+    .resultado-card {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        padding: 20px 30px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .resultado-elecciones {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+        color: #e0e0ff;
+    }
+
+    .resultado-elecciones span {
+        font-weight: bold;
+        color: #ffcc00;
+        text-transform: capitalize;
+    }
+
+    .resultado-veredicto {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    .veredicto-ganaste  { color: #00ac00; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    .veredicto-perdiste { color: #ffffff; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    .veredicto-empate   { color: #ffcc00; text-shadow: 0 0 10px rgba(255,204,0,0.5); }
+    .veredicto-espera   { color: #aaa; font-size: 1.2rem; }
+
+    .pensando {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .btn-jugar {
+        display: block;
+        margin: 20px auto;
+        background-color: #ffcc00;
+        color: #000;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-jugar:hover {
+        background-color: #ffaa00;
+    }
+
+    .btn-reiniciar {
+        display: none;
+        margin: 15px auto 0;
+        background-color: rgba(255,255,255,0.2);
+        color: #fff;
+        padding: 10px 24px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 2px solid #ffcc00;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .btn-reiniciar:hover {
+        background-color: rgba(255,204,0,0.25);
+    }
