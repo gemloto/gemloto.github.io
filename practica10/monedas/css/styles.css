@@ -1,84 +1,78 @@
-body { 
-    font-family: Arial, sans-serif; 
-    background: #f8f9fa; 
-    padding: 40px 20px; 
+body {
     margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1d4350, #a43931);
+    color: white;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
-h1 { 
-    text-align: center; 
-    color: #333; 
-    margin-bottom: 30px; 
+h1, h2 {
+    text-align: center;
 }
 
-.form-row {
+h2 {
+    font-weight: normal;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.formulario {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
 }
 
-label { 
-    margin-bottom: 8px; 
-    font-weight: bold; 
-    color: #555; 
-}
-
-input { 
-    padding: 12px; 
-    border: 2px solid #ddd; 
-    border-radius: 5px; 
-    font-size: 16px;
-}
-
-input:focus { 
-    border-color: #007bff; 
-    outline: none; 
-}
-
-#btn-cifrar {
-    width: 100%;
-    padding: 15px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
+label {
     font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    width: 120px;
+}
+
+input[type="button"] {
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #ffcc00;
+    color: black;
     cursor: pointer;
 }
 
-#btn-cifrar:hover { background: #0056b3; }
-
-hr { 
-    border: none; 
-    height: 2px; 
-    background: #eee; 
-    margin: 25px 0; 
+input[type="button"]:hover {
+    background: #ffb300;
 }
 
-.resultado {
-    background: #e9ecef;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: monospace;
-    font-size: 18px;
-    min-height: 60px;
-    text-align: center;
-    border: 2px solid #ddd;
-    margin: 0;
+#resultado {
+    margin-top: 20px;
 }
 
-.resultado.cifrado {
-    background: #d4edda; 
-    border: 2px solid #28a745; 
-    font-weight: bold;
+#resultado ul {
+    list-style: none;
+    padding: 0;
+}
+
+#resultado li {
+    background: rgba(255, 255, 255, 0.14);
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
 }

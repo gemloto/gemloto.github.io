@@ -1,50 +1,56 @@
-function cifrarCesar(texto, clave) {
-  const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let resultado = "";
 
-  texto = texto.toUpperCase();
+        let moneda="EUR"
+        //let moneda="USD"
+        let url=`https://api.frankfurter.dev/v1/latest?base=${moneda}`
 
-  for (let i = 0; i < texto.length; i++) {
-    let letra = texto[i];
+        let cantidad=document.getElementById("cantidad")
+        let convertirBtn=document.getElementById("convertir")
+        let resultado=document.getElementById("resultado")
 
-    let posicion = alfabeto.indexOf(letra);
+        //funciones
+        /*
+            Devuelve un li con los datos de la moneda
+        */
+            /*  ACABALO  */
+          function creaElemento(valor, clave) {            
+            let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
+            //let liElement ....
+            let liElement = document.createElement("li");
+            liElement.textContent = `${cantidad.value} ${moneda} = ${total} ${clave}`;
+            /*  FIN ACABALO  */
+            return liElement
+        }
 
-    if (posicion === -1) {   // no está en el alfabeto
-      resultado += letra;    // se deja igual (espacios, etc.)
-    } else {
-      let nuevaPosicion = (posicion + clave) % alfabeto.length;
-      let nuevaLetra = alfabeto[nuevaPosicion];
-      resultado += nuevaLetra;
-    }
-  }
+        
+        /*
+            Obtiene los cambios y los pinta en pantalla 
+        */
+        async function convertir(){        
+            //resultado.innerHTML=`1 ${moneda} = ${datos["rates"][moneda]} USD`
+            fetch(url)
+                .then(response => response.json())
+                .then(datos => {
+                    // haz cosas con los datos        
+                    console.log(datos);
 
-return resultado;
-}
+                    let cambios=Object.entries(datos.rates);
+                    let ulElement = document.createElement("ul");
 
-// DOM (punto 1 teoría)
-const inputFrase = document.getElementById("frase");
-const inputPaso = document.getElementById("paso");
-const btnCifrar = document.getElementById("btn-cifrar");
-const pResultado = document.getElementById("resultado");
+                    cambios.forEach(([clave, valor]) => {
+                        console.log(clave, valor);
+                        /*  ACABALO  */
+                        //usa creaElemento(valor, clave)
+                        /*  FIN ACABALO  */    
+                        let liElement = creaElemento(valor, clave);
+                        ulElement.appendChild(liElement);
+                    });
 
-// Eventos (punto 3 teoría)
-btnCifrar.addEventListener("click", () => {
-  const texto = inputFrase.value;
-  const paso = parseInt(inputPaso.value);
-
-  if (!texto || isNaN(paso)) {
-    pResultado.textContent = "Rellena la frase y el paso correctamente.";
-    pResultado.classList.remove('cifrado');  // classList punto 4
-    return;
-  }
-
-  const cifrado = cifrarCesar(texto, paso);
-    pResultado.textContent = cifrado;
-    pResultado.classList.add('cifrado');  // classList punto 4
-});
-
-// Enter (evento keypress punto 3)
-inputFrase.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') btnCifrar.click();
-});
-
+                    resultado.appendChild(ulElement);
+            })
+                .catch(error => console.log(error));                        
+        }
+        //eventos
+        convertirBtn.addEventListener("click", function(){
+            resultado.innerHTML=""
+            convertir()
+        })
