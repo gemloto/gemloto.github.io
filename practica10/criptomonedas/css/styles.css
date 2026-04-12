@@ -1,84 +1,66 @@
-body { 
-    font-family: Arial, sans-serif; 
-    background: #f8f9fa; 
-    padding: 40px 20px; 
-    margin: 0;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.contenedor {
+  width: 80%;
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 { 
-    text-align: center; 
-    color: #333; 
-    margin-bottom: 30px; 
+h1 {
+  text-align: center;
+  color: #333;
 }
 
-.form-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+.formulario {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-label { 
-    margin-bottom: 8px; 
-    font-weight: bold; 
-    color: #555; 
+input[type="number"] {
+  padding: 8px;
+  width: 120px;
 }
 
-input { 
-    padding: 12px; 
-    border: 2px solid #ddd; 
-    border-radius: 5px; 
-    font-size: 16px;
+input[type="button"] {
+  padding: 8px 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-input:focus { 
-    border-color: #007bff; 
-    outline: none; 
+input[type="button"]:hover {
+  background-color: #005fa3;
 }
 
-#btn-cifrar {
-    width: 100%;
-    padding: 15px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+.resultados ul {
+  list-style: none;
+  padding: 0;
 }
 
-#btn-cifrar:hover { background: #0056b3; }
-
-hr { 
-    border: none; 
-    height: 2px; 
-    background: #eee; 
-    margin: 25px 0; 
+.resultados li {
+  background-color: #eef6ff;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.resultado {
-    background: #e9ecef;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: monospace;
-    font-size: 18px;
-    min-height: 60px;
-    text-align: center;
-    border: 2px solid #ddd;
-    margin: 0;
-}
-
-.resultado.cifrado {
-    background: #d4edda; 
-    border: 2px solid #28a745; 
-    font-weight: bold;
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
 }
