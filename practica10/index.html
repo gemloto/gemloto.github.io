@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 10-JavaScript 3</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .header {
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+    .practicas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .practica {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .practica:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+      background: rgba(255,255,255,0.2);
+    }
+    .practica h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .practica p {
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #4ade80, #22c55e);
+      color: #000;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(74, 222, 128, 0.6);
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+    }
+    .opcional {
+      opacity: 0.7;
+    }
+    .opcional .btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    }
+    .opcional .btn:hover {
+      background: linear-gradient(135deg, #d97706, #b45309);
+    }
+    .footer {
+      margin-top: 4rem;
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .practicas {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎯 Práctica 10</h1>
+    <p class="subtitle">JavaScript 3 - Promesas y APIs</p>
+  </div>
+
+  <div class="practicas">
+    <div class="practica">
+      <h2>🌡️ Temperatura</h2>
+      <p>Consulta el clima de cualquier ciudad usando OpenWeather API con fetch.</p>
+      <a href="temperatura/temperatura.html" class="btn">Ver práctica</a>
+    </div>
+
+    <div class="practica">
+      <h2>🪨 Piedra Papel Tijera Lagarto Spock</h2>
+      <p>Juego con promesas y cuenta atrás de 5 segundos contra la IA.</p>
+      <a href="spock/spock.html" class="btn">Jugar</a>
+    </div>
+
+    <div class="practica">
+      <h2>💰 Conversor de Monedas</h2>
+      <p>Conversor de divisas con la API de Frankfurter.</p>
+      <a href="monedas/monedas.html" class="btn">Convertir</a>
+    </div>
+
+    <div class="practica opcional">
+      <h2>₿ Criptomonedas</h2>
+      <p>Conversor de Bitcoin, Ethereum y más con Coinbase API (opcional).</p>
+      <a href="criptomonedas/criptomonedas.html" class="btn">Convertir</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Repositorio: <a href="https://github.com/tuusuario/practica10">github.com/tuusuario/practica10</a></p>
+    <p>Curso de JavaScript 3 - Ciclos Formativos GS</p>
+  </div>
+</body>
+</html>
