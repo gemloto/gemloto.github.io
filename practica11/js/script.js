@@ -145,12 +145,12 @@
                         <div class="popup-content">
                         <h4>${props.direccion}</h4>
                         <ul>
-                            <li> ID: <strong>${props.id}</strong></li>
-                            <li> Actualizado: ${props.actualizado}</li>
-                            <li> Disponibles: ${props.disponibles}</li>
-                            <li> Libres: ${props.libres}</li>
-                            <li> Total: ${props.total}</li>
-                            <li> Estado: ${props.estado}</li>                            
+                            <li>ID: <strong>${props.id}</strong></li>
+                            <li>Actualizado: ${props.actualizado}</li>
+                            <li>Disponibles: ${props.disponibles}</li>
+                            <li>Libres: ${props.libres}</li>
+                            <li>Total: ${props.total}</li>
+                            <li>Estado: ${props.estado}</li>                            
                         </ul>
                         </div>
                     `;
